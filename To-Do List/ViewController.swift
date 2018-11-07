@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var toDoListItems: UITextView!
+    @IBOutlet weak var toDoListAddItem: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func didAddItemLoad(_ sender: Any) {
+        if let text = toDoListAddItem.text {
+            if text == "" {
+                return
+            }
+            toDoListItems.text.append("\(text)\n")
+            toDoListAddItem.text = ""
+            toDoListAddItem.resignFirstResponder()
+        }
+    }
+    
 }
 
