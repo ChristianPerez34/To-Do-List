@@ -9,6 +9,7 @@
 import UIKit
 
 class ToDoListViewController: UIViewController {
+    @IBOutlet weak var addToList: UITextField!
     
     var list: [String] = []
 
