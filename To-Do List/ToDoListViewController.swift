@@ -11,18 +11,23 @@ import UIKit
 class ToDoListViewController: UIViewController {
     @IBOutlet weak var addToList: UITextField!
     
+    @IBOutlet weak var toDoListTableView: UITableView!
     var list: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        list.append("Buy food for cats")
-        list.append("Pick up materials from office")
-        list.append("Happy hour at local bar")
-        list.append("Call Chris - store front")
-        list.append("Sone really long text to se how much text I can put before it is crossed out for no reason at all")
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func didTapAddButton(_ sender: Any) {
+        if let text = addToList.text{
+            if text != ""{
+                list.append(text)
+                addToList.text = ""
+                toDoListTableView.reloadData()
+            }
+        }
+    }
 }
 
 extension ToDoListViewController: UITableViewDataSource, UITableViewDelegate{
