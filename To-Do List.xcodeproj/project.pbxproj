@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4437841F219E41BE00734858 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437841E219E41BE00734858 /* TableViewCell.swift */; };
 		44B4AD35219261A800D0E403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4AD34219261A800D0E403 /* AppDelegate.swift */; };
 		44B4AD3A219261A800D0E403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B4AD38219261A800D0E403 /* Main.storyboard */; };
 		44B4AD3C219261AC00D0E403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B4AD3B219261AC00D0E403 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4437841E219E41BE00734858 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		44B4AD31219261A800D0E403 /* To-Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B4AD34219261A800D0E403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44B4AD39219261A800D0E403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				44B4AD3D219261AC00D0E403 /* LaunchScreen.storyboard */,
 				44B4AD40219261AC00D0E403 /* Info.plist */,
 				44BDE791219789930002F37C /* ToDoListViewController.swift */,
+				4437841E219E41BE00734858 /* TableViewCell.swift */,
 			);
 			path = "To-Do List";
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4437841F219E41BE00734858 /* TableViewCell.swift in Sources */,
 				44BDE792219789930002F37C /* ToDoListViewController.swift in Sources */,
 				44B4AD35219261A800D0E403 /* AppDelegate.swift in Sources */,
 			);

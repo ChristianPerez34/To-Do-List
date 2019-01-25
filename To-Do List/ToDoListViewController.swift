@@ -9,9 +9,10 @@
 import UIKit
 
 class ToDoListViewController: UIViewController {
-    @IBOutlet weak var addToList: UITextField!
     
+    @IBOutlet weak var addToList: UITextField!
     @IBOutlet weak var toDoListTableView: UITableView!
+    
     var list: [String] = []
 
     override func viewDidLoad() {
@@ -28,6 +29,18 @@ class ToDoListViewController: UIViewController {
             }
         }
     }
+    
+    @objc func checkButtonTapped(sender:UIButton) {
+        print("Button is pressed")
+        if sender.isSelected{
+            // Remove checkmarked button
+            sender.isSelected = false
+        }
+        else{
+            // Add checkmark
+            sender.isSelected = true
+        }
+    }
 }
 
 extension ToDoListViewController: UITableViewDataSource, UITableViewDelegate{
@@ -38,8 +51,10 @@ extension ToDoListViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let toDoText = list[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListCell")!
-        cell.textLabel?.text = toDoText
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListCell") as! TableViewCell
+        cell.setLabel(text: toDoText)
+        cell.checkListButton.tag = indexPath.row
+        cell.checkListButton.addTarget(self, action: #selector(checkButtonTapped(sender:)), for: .touchUpInside)
         return cell
     }
 }
